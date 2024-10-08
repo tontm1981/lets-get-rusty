@@ -1,0 +1,9 @@
+[package]
+name = "auth_service"
+version = "0.1.0"
+edition = "2021"
+description = "Auth service example"
+license = "MIT"
+
+[dependencies]
+rand = "0.8.5"

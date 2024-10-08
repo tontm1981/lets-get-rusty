@@ -1,0 +1,27 @@
+[package]
+name = "features"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde ={ version = "1.0.209", features = ["derive"], optional = true }
+rgb = { version = "0.8.45", features = ["serde"], optional = true }
+
+[features]
+# Features are disabled by default.
+# This line will enable "color" feature by default
+default =["color"]
+
+# Enables RGB dependency, when color feature is enabled
+color = ["dep:rgb"]
+
+shapes = [
+    # Enabled color dependency 
+    "color", 
+    
+    # Enables serde dependency
+    "dep:serde",
+    
+    # Enable serde feature in rgb dependency
+    "rgb?/serde"
+]

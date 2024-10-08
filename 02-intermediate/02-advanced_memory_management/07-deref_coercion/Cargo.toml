@@ -1,0 +1,6 @@
+[package]
+name = "deref_coertion"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
