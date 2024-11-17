@@ -1,5 +1,6 @@
 #[derive(Debug)]
 struct BrowserCommand<T> {
+    #[allow(dead_code)]
     name: String,
     payload: T,
 }
@@ -31,6 +32,7 @@ fn main() {
     serialize_payload(p2);
 }
 
+#[allow(unused_variables)]
 fn serialize_payload<T>(payload: T) -> String {
     "placeholder".to_owned()
 }

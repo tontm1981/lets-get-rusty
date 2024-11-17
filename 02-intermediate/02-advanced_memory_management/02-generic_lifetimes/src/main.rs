@@ -15,6 +15,7 @@ fn main() {
     // println!("{} begins!", result);
 }
 
+#[allow(dead_code)]
 fn first_turn<'a>(p1: &'a str, p2: &'a str) -> &'a str {
     if rand::random() {
         return p1;

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 trait UIComponent {
     fn render(&self) {
         println!("Rendering UI component");
@@ -10,6 +11,7 @@ struct Button {
 
 impl UIComponent for Button {}
 
+#[allow(dead_code)]
 struct Container {
     name: String,
     child: Box<Container>,
@@ -42,6 +44,7 @@ fn main() {
     let button_d = button_b;
     println!("{}", button_d.text);
 
+    #[allow(unused_variables)]
     let components = vec![
         Box::new(button_c),
         button_d

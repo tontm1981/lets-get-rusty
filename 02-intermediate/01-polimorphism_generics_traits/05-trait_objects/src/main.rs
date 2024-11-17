@@ -1,6 +1,7 @@
 trait Vehicle: Paint {
     fn park(&self);
 
+    #[allow(dead_code)]
     fn get_default_color() -> String {
         "black".to_string()
     }
@@ -21,12 +22,18 @@ impl Paint for House {
 }
 
 struct VehicleInfo {
+    #[allow(dead_code)]
     maker: String,
+
+    #[allow(dead_code)]
     model: String,
+
+    #[allow(dead_code)]
     year: u32,
 }
 
 struct Car {
+    #[allow(dead_code)]
     info: VehicleInfo,
 }
 
@@ -38,11 +45,13 @@ impl Vehicle for Car {
 
 impl Paint for Car {}
 
+#[allow(dead_code)]
 struct Truck {
     info: VehicleInfo,
 }
 
 impl Truck {
+    #[allow(dead_code)]
     fn unload(&self) {
         println!("Unloading the truck");
     }
@@ -73,9 +82,11 @@ fn main() {
     let object = create_paintable_object(true);
     paint_blue(object.as_ref());
 
+    #[allow(unused_variables)]
     let paintable_objects: Vec<&dyn Paint> = vec![&car, &house];
 }
 
+#[allow(dead_code)]
 fn paint_red<T: Paint>(object: &T) {
     object.paint("red".to_string());
 }
@@ -88,11 +99,13 @@ fn paint_green<T>(object: &T) where T: Paint {
     object.paint("green".to_string());
 }
 
+#[allow(dead_code)]
 fn paint_vehicle_green<T>(object: &T) where T: Vehicle {
     object.paint("green".to_string());
 }
 
-fn paint_vehicle_red(object: &(impl Vehicle)) {
+#[allow(dead_code)]
+fn paint_vehicle_red(object: &impl Vehicle) {
     object.paint("red".to_string());
 }
 

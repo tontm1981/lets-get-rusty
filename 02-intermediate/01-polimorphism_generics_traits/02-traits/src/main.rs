@@ -1,13 +1,16 @@
+#[allow(dead_code)]
 trait Park {
     fn park(&self);
 }
 
+#[allow(dead_code)]
 trait Paint {
     fn paint(&self, color: String) {
         println!("Painting the vehicle {}", color);
     }
 }
 
+#[allow(dead_code)]
 struct House {}
 
 impl Paint for House {
@@ -16,12 +19,14 @@ impl Paint for House {
     }
 }
 
+#[allow(dead_code)]
 struct VehicleInfo {
     maker: String,
     model: String,
     year: u32,
 }
 
+#[allow(dead_code)]
 struct Car {
     info: VehicleInfo,
 }
@@ -34,11 +39,13 @@ impl Park for Car {
 
 impl Paint for Car {}
 
+#[allow(dead_code)]
 struct Truck {
     info: VehicleInfo,
 }
 
 impl Truck {
+    #[allow(dead_code)]
     fn unload(&self) {
         println!("Unloading the truck");
     }

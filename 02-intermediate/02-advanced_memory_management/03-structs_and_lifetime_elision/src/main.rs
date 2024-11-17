@@ -27,6 +27,7 @@ fn main() {
     
 }
 
+#[allow(dead_code)]
 fn take_and_return_content<'a>(content: &'a str) -> &str {
     content
 }

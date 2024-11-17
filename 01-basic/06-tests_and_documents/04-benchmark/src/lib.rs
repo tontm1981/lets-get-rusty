@@ -16,6 +16,7 @@ mod sorting {
         }
     }
 
+    #[allow(dead_code)]
     pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
         let length: usize = arr.len();
         for i in 0..length {

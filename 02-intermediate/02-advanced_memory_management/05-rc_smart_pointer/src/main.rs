@@ -5,11 +5,13 @@ struct Database {}
 
 #[derive(Debug)]
 struct AuthService{
+    #[allow(dead_code)]
     db: Rc<Database>,
 }
 
 #[derive(Debug)]
 struct ContentService{
+    #[allow(dead_code)]
     db: Rc<Database>,
 }
 
